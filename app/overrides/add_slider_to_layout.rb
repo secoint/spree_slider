@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => 'spree/layouts/spree_application',
+Deface::Override.new(:virtual_path => 'layouts/spree_application',
                      :name => 'add_slider',
                      :insert_after => %q{#header[data-hook]},
                      :text => %q{

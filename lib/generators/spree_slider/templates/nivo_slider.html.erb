@@ -1,4 +1,4 @@
-<% if Spree::Slide.published.count > 0 %>
+<% if Slide.published.count > 0 %>
   <style type="text/css"> 
   .theme-default #slider {
       margin:0 auto 0 auto;
@@ -13,7 +13,7 @@
   <div class="slider-wrapper theme-default">
     <div class="ribbon"></div>
     <div id="slider" class="nivoSlider">
-      <% Spree::Slide.published.each do |s| %>
+      <% Slide.published.each do |s| %>
         <% if s.body != "" %>
           <%= link_to image_tag(s.image.url, :title => '#' + s.name.to_url), s.link_url %>
         <% else %>
@@ -22,7 +22,7 @@
       <% end %>
     </div>
 
-    <% Spree::Slide.published.each do |s| %>
+    <% Slide.published.each do |s| %>
       <div id='<%= s.name.to_url %>' class='nivo-html-caption'>
         <%= s.body.html_safe %>
       </div>

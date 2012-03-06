@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => 'spree/admin/configurations/index',
+Deface::Override.new(:virtual_path => 'admin/configurations/index',
                      :name => 'add_slides_to_admin_configurations_menu',
                      :insert_bottom => "[data-hook='admin_configurations_menu']",
                      :text => %q{
