@@ -13,7 +13,7 @@
   <div class="slider-wrapper theme-default">
     <div class="ribbon"></div>
     <div id="slider" class="nivoSlider">
-      <% Slide.published.each do |s| %>
+      <% Slide.published.ordered.each do |s| %>
         <% if s.body != "" %>
           <%= link_to image_tag(s.image.url, :title => '#' + s.name.to_url), s.link_url %>
         <% else %>
