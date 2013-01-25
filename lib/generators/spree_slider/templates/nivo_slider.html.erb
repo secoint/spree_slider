@@ -22,7 +22,7 @@
       <% end %>
     </div>
 
-    <% Slide.published.each do |s| %>
+    <% Slide.published.ordered.each do |s| %>
       <div id='<%= s.name.to_url %>' class='nivo-html-caption'>
         <%= s.body.html_safe %>
       </div>

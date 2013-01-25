@@ -11,7 +11,7 @@
 
 <h1>Slides</h1>
 
-<table class="index" id="listing_slides" data-hook>
+<table class="index sortable" id="listing_slides" data-hook>
   <thead>
     <tr data-hook="admin_slides_index_headers">
       <th>Name</th>
@@ -21,7 +21,10 @@
   <tbody>
     <% @slides.each do |slide|%>
       <tr id="<%= dom_id slide %>" data-hook="admin_slides_index_rows">
-        <td width="350px" ><%=link_to slide.name, object_url(slide) %></td>
+        <td width="350px" >
+          <span class="handle"></span>
+          <%=link_to slide.name, object_url(slide) %>
+        </td>
         <td data-hook="admin_slides_index_row_actions">
           <%= link_to_edit slide, :class => 'edit' %> &nbsp;
           <%= link_to_delete slide %>
